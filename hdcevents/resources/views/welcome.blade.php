@@ -37,5 +37,22 @@
             <p>O nome não é pedro</p>
         @endif
 
+        @for($i = 0,$iMax = count($arr); $i < $iMax; $i++)
+            <p>{{$arr[$i]}} - {{$i}}</p>
+            @if($i == 2)
+                <p>O i é igual a 2</p>
+            @endif
+        @endfor
+
+        @foreach($nomes as $nome)
+            <p>{{$loop->index}}</p>
+            <p>{{$nome}}</p>
+        @endforeach
+
+        @php
+            $nome = 'fulano';
+            echo $nome;
+        @endphp
+
     </body>
 </html>

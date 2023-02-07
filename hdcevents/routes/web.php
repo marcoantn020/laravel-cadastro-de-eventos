@@ -16,7 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $nome = "Marco";
     $idade = 31;
-    return view('welcome', ['nome' => $nome, 'idade' => $idade]);
+    $arr = [1,2,56,32,6,5];
+    $nomes = ['antoni', 'xulia', 'rodrigo', 'leonel', 'rayara'];
+    return view('welcome',
+        [
+            'nome' => $nome,
+            'idade' => $idade,
+            'profissao' => 'programador',
+            'arr' => $arr,
+            'nomes' => $nomes
+        ]);
 });
 
 Route::get('/contact', function () {
