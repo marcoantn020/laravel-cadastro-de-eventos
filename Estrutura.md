@@ -70,3 +70,9 @@
     return view('products', ['busca' => $search]);
     })
     ___________________________________________
+
+## flash messages
+    diretiva session na pagina que vai receber a flash messages
+    ___________________________________________
+        with('nome', 'mensagem')
+    ___________________________________________
