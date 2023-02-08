@@ -3,3 +3,7 @@
 
 #### Run Project
     - php artisan serve
+
+#### Controller via artisan
+    - php artisan make:controller NomeController
+
