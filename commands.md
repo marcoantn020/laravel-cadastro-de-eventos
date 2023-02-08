@@ -23,3 +23,4 @@
 
 #### Eloquent
     - Model::all()
+    - Model::save()
