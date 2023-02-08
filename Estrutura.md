@@ -48,3 +48,25 @@
 ## comentario do blade [nao é rederizado pelo navegado e nem pelo php]
     
     {{-- cometario do blade --}}
+    ___________________________________________
+
+## parametro opcional / parametro obrigatorio
+    
+    _________parametro opcional_______________________
+    Route::get('/produtos_teste/{id?}', function ($id = null) {
+    return view('product', ['id' => $id]);
+    });
+    _________parametro obrigatorio_______________________
+    Route::get('/produtos_teste/{id}', function ($id) {
+    return view('product', ['id' => $id]);
+    });
+    ___________________________________________
+
+## parametro por query string
+    
+    __________parametro por query string______________
+    Route::get('/produtos', function () {
+    $search = request('search');
+    return view('products', ['busca' => $search]);
+    })
+    ___________________________________________
