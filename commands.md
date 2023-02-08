@@ -24,3 +24,4 @@
 #### Eloquent
     - Model::all()
     - Model::save()
+    - Model::findOrFail()
