@@ -167,6 +167,10 @@ header {
     font-size: 20px;
 }
 
+#description-container {
+    margin-top: 15px;
+}
+
 /*event page*/
 #image-container,
 #info-container {
