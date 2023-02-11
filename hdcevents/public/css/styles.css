@@ -213,6 +213,12 @@ header {
     display: inline-block;
 }
 
+/*edit page events*/
+.img-preview {
+    width: 200px;
+    margin-top: 20px;
+}
+
 
 /*footer*/
 footer {
