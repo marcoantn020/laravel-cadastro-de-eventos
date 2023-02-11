@@ -82,6 +82,15 @@ class EventController extends Controller
         return redirect('/dashboard')->with('msg', 'evento atualizado com sucesso.');
     }
 
+    public function joinEvent($id)
+    {
+        $user = auth()->user();
+        $user->eventsAsParticipant()->attach($id);
+        $event = Event::findOrFail($id);
+        return redirect('/dashboard')
+            ->with('msg', 'Sua presenã no evento ' . $event->title .' foi confirmada.');
+    }
+
     private function uploadImage($request)
     {
         if($request->hasFile('image') && $request->file('image')->isValid()) {

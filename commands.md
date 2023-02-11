@@ -13,6 +13,7 @@
 #### Database - migrations
     - php artisan migrate  (gera as migrations)
     - php artisan make:migration create_nome-da-tabela_table  (cria uma tabela)
+    - php artisan make:migration create_nome-da-tabela1_nome-da-tabela2_table  (cria uma tabela com duas chaves estrangeiras)
     - php artisan make:migration add_campo_to_nome-tabela_table  (cria uma migrate para atualizar um tabela)
     - php artisan migrate:status
     - php artisan migrate:fresh   (desfaz todas as migrate, e as faz novamente comeca do zero)
