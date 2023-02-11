@@ -24,7 +24,7 @@
                     <tr>
                         <td scropt="row">{{ $loop->index +1 }}</td>
                         <td><a href="/events/{{ $event->id }}">{{ $event->title }}</a></td>
-                        <td>0</td>
+                        <td>{{ count($event->users) }}</td>
                         <td>
                             <a href="/events/edit/{{ $event->id }}" class="btn btn-info edit-btn">
                                <ion-icon name="create-outline"></ion-icon>Editar
@@ -46,4 +46,40 @@
     @endif
 </div>
 
+
+<div class="col-md-10 offset-md-1 dashboard-title-container">
+    <h1>Eventos que estou participando</h1>
+</div>
+<div class="col-md-10 offset-md-1 dashboard-events-container">
+    @if(count($eventsAsParticipant) > 0)
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Participantes</th>
+                <th scope="col">Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($eventsAsParticipant as $event)
+                <tr>
+                    <td scropt="row">{{ $loop->index +1 }}</td>
+                    <td><a href="/events/{{ $event->id }}">{{ $event->title }}</a></td>
+                    <td>{{ count($event->users) }}</td>
+                    <td>
+                        <a href="/events/edit/{{ $event->id }}" class="btn btn-info edit-btn">
+                            <ion-icon name="create-outline"></ion-icon>Sair do evento
+                        </a>
+
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+    @else
+        <p>Voce nao esta participando de nenhum evento, <a href="/">criar evento</a> </p>
+    @endif
+</div>
 @endsection
